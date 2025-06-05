@@ -1,0 +1,22 @@
+name: Compile & Push
+
+"on"
+  push:
+    branches: ["main"]
+
+jobs:
+  build-latex:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repsoitory
+      uses: actions/checkout@v4
+
+    - name: Github Action for LaTeX
+      uses: xu-cheng/latex-action@3.3.0
+      root_file: cv.tex
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v4
+      with:
+        name: PDF
+        path: cv.pdf
