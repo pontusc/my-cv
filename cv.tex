@@ -1,0 +1,156 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \usepackage{mathptmx}
+    \usepackage[hidelinks]{hyperref}
+    \hypersetup{colorlinks=false,linkcolor=blue,urlcolor=blue}
+    \urlstyle{mathptmx}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+
+\begin{center}
+	{\Huge \scshape {Pontus Curtsson}}\\
+    \vspace{2mm}
+	\href{mailto:pontuscurtsson@gmail.com}{pontuscurtsson@gmail.com}\hspace{3mm}$\cdot$\hspace{3mm}+46 72 205 5232\hspace{3mm}$\cdot$\hspace{3mm}\href{https://github.com/pontusc}{github.com/pontusc}\\
+\end{center}
+\vspace{2mm}
+
+%==== Intro ====%
+\header{Profile}
+\vspace{4mm}
+Positive and solution-oriented person eager to learn new things and overcome new challenges. Loves working in teams towards common goals and delivering quality solutions. 
+\newline
+\newline
+Looking for a workplace that values the individual where I can learn and grow from others.
+\vspace{8mm}
+
+%==== Education ====%
+\header{Education}
+\vspace{4mm}
+\textbf{DevOps}\hfill 2024 - 2026\\
+Chas Academy \hfill Stockholm\\
+\vspace{4mm}
+\textbf{Computer Science}\hfill 2016 - 2019\\
+Royal Institute of Technology (KTH) \hfill Stockholm\\
+\vspace{8mm}
+
+%==== Skills ====%
+
+\header{Technical Skills}
+\vspace{4mm}
+\begin{tabular}{ l l }
+	Languages: & C\#, Java, Python, Bash, SQL, C++, Go, C, Lua\\[1mm]
+	Tools:     & Git, Linux, Docker, GitHub Actions, GitLab Pipelines, Kubernetes, ArgoCD, K3S\\
+\end{tabular}
+\vspace{8mm}
+
+\header{Projects}
+{\textbf{Homelab}} {\sl K8s, Helm, Docker, GitHub Actions, ArgoCD, Incus} \\
+A homelab kubernetes deployment running on 3 nodes (virtualized) for me to test new tools and learn about server management, networking and kubernetes GitOps. All relevant documentation can be found \href{https://github.com/pontusc/homelab}{in this repository} or via my GitHub.\\
+\vspace*{8mm}
+
+%==== Experience ====%
+\header{Developer - IT}
+\vspace{4mm}
+
+\textbf{Developer} \hfill 2022 - 2024\\
+\textit{T3C Consulting AB} \hfill Remote\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Various small scripts for excel and automation
+	\item IT-problemsolving, both software \& hardware
+\end{itemize}
+\vspace{1mm}
+\textbf{Developer} \hfill 2018 - 2022\\
+\textit{CrashCourse AB} \hfill Stockholm \& Remote\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Unreal Engine \& Unity development in C++ \& C\#
+	\item Interaction design with HTC Vive \& other VR headsets
+    \item Multiplayer implementation in Unity
+	\item Design of scenarios for mass casualty triage simulations, e.g. train crash
+	\item Held training \& customer demos using developed tool
+	\item Managed planning \& prioritization of tasks
+	\item Basic animation work
+    \item Staying flexible in tasks and delivering solutions to whatever is needed
+\end{itemize}
+\vspace{1mm}
+\textbf{1st Line Support} \hfill 2014, 2016 - 2018\\
+\textit{Calabrio} \hfill Stockholm \& Remote\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Managing communication \& coordination with customers to provide a good \& timely resolution
+	\item Technical support such as updating customer installations, setting up testing environments for bugs etc.
+\end{itemize}
+\vspace{8mm}
+\ 
+\end{document}
