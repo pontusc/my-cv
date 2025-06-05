@@ -2,8 +2,8 @@ name: Compile & Push
 
 "on":
   push:
-  # paths:
-  # - cv.tex
+    paths:
+    - cv.tex
 
 jobs:
   build-latex:
