@@ -2,13 +2,16 @@ name: Compile & Push
 
 "on":
   push:
-    branches: ["main"]
+  # paths:
+  # - cv.tex
 
 jobs:
   build-latex:
     runs-on: ubuntu-latest
+    env:
+      CV_FILENAME: pontuscurtsson-cv.pdf
     steps:
-    - name: Check out repsoitory
+    - name: Check out repository
       uses: actions/checkout@v4
 
     - name: Github Action for LaTeX
@@ -16,8 +19,13 @@ jobs:
       with:
         root_file: cv.tex
 
-    - name: Upload PDF
-      uses: actions/upload-artifact@v4
-      with:
-        name: PDF
-        path: cv.pdf
+    - name: Commit
+      run: |
+        mv cv.pdf "$CV_FILENAME"
+        git config --local user.name 'github-actions[bot]'
+        git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+        git add "$CV_FILENAME"
+        git commit  -m "Update CV"
+
+    - name: Push
+      uses: ad-m/github-push-action@master
