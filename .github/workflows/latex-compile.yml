@@ -1,6 +1,6 @@
 name: Compile & Push
 
-"on"
+"on":
   push:
     branches: ["main"]
 
@@ -13,7 +13,8 @@ jobs:
 
     - name: Github Action for LaTeX
       uses: xu-cheng/latex-action@3.3.0
-      root_file: cv.tex
+      with:
+        root_file: cv.tex
 
     - name: Upload PDF
       uses: actions/upload-artifact@v4
